@@ -3,11 +3,11 @@
         <div class="small-12 columns">
            <CheckoutAddressDetailsForm :formData="billDetails" ref="orderForm"/>
         </div>
-        <div class="small-12 columns">
-            <OrderSummary ref="summary"/>
+        <div class="small-12 columns" >
+            <OrderSummary ref="summary" style="width:60%;margin:auto;"/>
             <div class="row">
-                <div class="small-12 columns">
-                    <button @click="placeOrder">Confirm Order</button>
+                <div class="small-12 columns" style="text-align:center;">
+                    <button class="button-green" @click="placeOrder" >Confirm Order</button>
                 </div>
             </div>
         </div>

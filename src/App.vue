@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <div class="navbar">
-        <div class="navbar-logo">Swaggy</div>
+        <div class="navbar-logo" @click="goToHome">Swaggy</div>
       </div>
        <router-view></router-view>
     </div>
@@ -17,6 +17,11 @@ export default {
   name: 'app',
   components: {
     
+  },
+  methods:{
+    goToHome(){
+      this.$router.push("/")
+    }
   }
 }
 </script>
@@ -29,6 +34,7 @@ export default {
   padding-top:10px;
   padding-left:50px;
   font-family: 'Poppins',sans-serif;
+  cursor: pointer;
  
 }
 .navbar{

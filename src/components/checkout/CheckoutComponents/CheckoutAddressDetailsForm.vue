@@ -158,5 +158,8 @@ export default {
 }
 .checkout-form-container{
     max-width:900px;
+    width:100%;
+    margin:auto;
+    
 }
 </style>

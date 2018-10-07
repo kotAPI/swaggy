@@ -16,8 +16,8 @@
         <div class="small-12 medium-5 columns" style="margin-top:40px;">
            <Cart :cartItems="cartItems" ref="cart" context="cart" @ITEM_ADDED="addItemToCardHandler" @ITEM_REMOVED="removeItemHandler"/>
            <div class="row">
-            <div class="small-12 columns">
-                <button @click="goToBilling">Checkout</button>
+            <div class="small-12 columns" style="text-align:center;">
+                <button @click="goToBilling" class="button-green">Checkout</button>
             </div>
         </div>
         </div>
