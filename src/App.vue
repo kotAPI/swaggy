@@ -43,6 +43,7 @@ export default {
 }
 .container{
   width:1160px;
+  width:100%;
   margin:auto;
   z-index: 10;
   position: relative;
