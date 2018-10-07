@@ -1,19 +1,23 @@
 <template>
     <div>
-        <div class="row">
+        <div class="row thankyou-container">
             <div class="small-12 columns">
-                Thank you {{userDetails.first_name}} {{userDetails.last_name}}
+                <div class="thankyou-line">
+                    Thank you <strong>{{userDetails.first_name}} </strong> <strong> {{userDetails.last_name}}</strong>
+                </div>
             </div>
             <div class="small-12 columns">
-                We have reviewed your order {{orderID}} for rupees {{finalPrice}}
+                <div class="thankyou-line">
+                    We have reviewed your order <strong>{{orderID}}</strong> for rupees <strong>{{finalPrice}}</strong>
+                </div>
             </div>
             <div class="small-12 columns">
-                <div>We will deliver your order to the following address</div>
-                <div>{{userDetails.address1}}</div>
-                <div>{{userDetails.address2}}</div>
-                <div>{{userDetails.city}}</div>
-                <div>{{userDetails.state}}</div>
-                <div>{{userDetails.pin}}</div>
+                <div class="thankyou-line">We will deliver your order to the following address</div>
+                <div class="thankyou-line">{{userDetails.address1}} </div>
+                <div class="thankyou-line">{{userDetails.address2}}</div>
+                <div class="thankyou-line">{{userDetails.city}}</div>
+                <div class="thankyou-line">{{userDetails.state}}</div>
+                <div class="thankyou-line">{{userDetails.pin}}</div>
             </div>
         </div>
     </div>
@@ -42,3 +46,15 @@ export default {
    }
 }
 </script>
+
+
+<style>
+.thankyou-container{
+    font-family: 'Poppins' !important;
+    text-align: center;
+}
+.thankyou-line{
+    font-family: 'Poppins' !important;
+    padding-bottom:12px;
+}
+</style>
