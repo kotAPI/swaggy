@@ -1,10 +1,10 @@
 <template>
     <div class="row">
         <div class="small-12 columns">
-           <CheckoutAddressDetailsForm/>
+           <CheckoutAddressDetailsForm :formData="billDetails" ref="orderForm"/>
         </div>
         <div class="small-12 columns">
-            <OrderSummary/>
+            <OrderSummary ref="summary"/>
             <div class="row">
                 <div class="small-12 columns">
                     <button @click="placeOrder">Confirm Order</button>
@@ -20,9 +20,27 @@ import CheckoutAddressDetailsForm from '@/components/checkout/CheckoutComponents
 import OrderSummary from '@/components/checkout/CheckoutComponents/OrderSummary'
 export default {
     components:{CheckoutAddressDetailsForm,OrderSummary},
+    data(){
+        return{
+            billDetails:{
+                first_name:"",
+                last_name:"",
+                address1:"",
+                address2:"",
+                city:"",
+                state:"",
+                pin:undefined,
+                phone_number:undefined
+            }
+        }
+    },
     methods:{
         placeOrder(){
-            this.$router.push("/order-placed/")
+            if(this.$refs.orderForm.validateForm()){
+                localStorage.finalprice = this.$refs.summary.getTotalPriceOfOrders()
+                this.$router.push("/order-placed/")
+            }
+            
         }
     }
 }

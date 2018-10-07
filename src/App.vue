@@ -25,5 +25,6 @@ export default {
   border:1px solid black;
   margin-top:60px;
   padding:10px;
+  font-family: 'Poppins', sans-serif !important;
 }
 </style>
