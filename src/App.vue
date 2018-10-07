@@ -2,7 +2,15 @@
   <div id="app">
     <div class="container">
       <div class="navbar">
-        <div class="navbar-logo" @click="goToHome">Swaggy</div>
+        <div class="row" style="width:400px;float:left;padding-left:40px;">
+          <div class="small-2 columns">
+            <div class="logo-image"></div>
+        
+          </div>
+          <div class="small-8 columns">
+            <div class="navbar-logo" @click="goToHome">Swaggy</div>
+          </div>
+        </div>
       </div>
        <router-view></router-view>
     </div>
@@ -27,14 +35,24 @@ export default {
 </script>
 
 <style>
+.logo-image{
+  background-image:url("https://cdn.dribbble.com/users/182238/screenshots/2421584/s1.jpg");
+  background-size:contain;
+  display:inline-block;
+  background-repeat: no-repeat;
+  width:64px;
+  height:64px;
+}
 .navbar-logo{
   color:orange;
   font-weight: 600;
   font-size:2em;
+  text-align: left;
   padding-top:10px;
-  padding-left:50px;
+
   font-family: 'Poppins',sans-serif;
   cursor: pointer;
+  display: inline-block;
  
 }
 .navbar{

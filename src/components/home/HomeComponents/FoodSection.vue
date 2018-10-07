@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="categoryItem in menu">
-            <h4>{{categoryItem.category}}</h4>
+            <h4 style="padding-left:20px;color:orange;">{{categoryItem.category}}</h4>
             <div class="row">
                 <div class="small-12 columns">
                     <div class="food-item-container">
@@ -13,7 +13,7 @@
                             <div class="small-7 columns">
                                 <div class="row">
                                     <div class="small-6 columns">
-                                        <div class="menu-item" style="text-align:center;font-size:1.2em;font-weight:800;">{{foodItem.name}}</div>
+                                        <div class="menu-item" style="text-align:center;font-size:0.9em;font-weight:600;">{{foodItem.name}}</div>
                                         
                                     </div>
                                     <div class="small-6 columns">
@@ -65,13 +65,14 @@
 
 <style>
     .menu-item-image {
-        width: 90%;
+        width: 120px;
         margin: auto;
-        height: 200px;
+        height: 120px;
         background-size: cover;
         border-radius: 10%;
         background-repeat: no-repeat;
         background-position: center center;
+        margin-bottom:20px;
     }
     
     .menu-item {
