@@ -34,6 +34,11 @@ export default {
             }
         }
     },
+    mounted(){
+        if(localStorage.cart===undefined){
+            this.$router.push("/")
+        }
+    },
     methods:{
         placeOrder(){
             if(this.$refs.orderForm.validateForm()){

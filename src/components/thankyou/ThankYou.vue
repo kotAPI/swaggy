@@ -30,6 +30,9 @@ export default {
         }
     },
    mounted(){
+       if(localStorage.formdata===undefined){
+           this.$router.push("/")
+       }
         this.orderID = (localStorage.orderid+"").toUpperCase()
         this.finalPrice = localStorage.finalprice
        this.userDetails = JSON.parse(localStorage.formdata)
