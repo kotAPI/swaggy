@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="small-12 medium-8 columns">
+        <div class="small-12 medium-7 columns">
             <div class="row">
                 <div class="small-12 columns">
                     <h3>Menu</h3>
@@ -13,7 +13,7 @@
             </div>
            
         </div>
-        <div class="small-12 medium-4 columns">
+        <div class="small-12 medium-5 columns">
            <Cart :cartItems="cartItems" ref="cart" context="cart" @ITEM_ADDED="addItemToCardHandler" @ITEM_REMOVED="removeItemHandler"/>
            <div class="row">
             <div class="small-12 columns">
